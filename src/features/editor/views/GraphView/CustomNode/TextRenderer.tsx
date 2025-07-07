@@ -75,7 +75,7 @@ export const TextRenderer = ({ children }: TextRendererProps) => {
     );
   }
 
-    // Verificar se contém códigos de cor do Minecraft (&0-9, &a-f, &k-or)
+  // Verificar se contém códigos de cor do Minecraft (&0-9, &a-f, &k-or)
   if (isMinecraftFormat(text)) {
     return <MinecraftText text={text} />;
   }

@@ -117,7 +117,7 @@ const minecraftIcons: Record<string, string> = {
   MILK_BUCKET: "🥛",
 
   // Default
-  DEFAULT: "📦"
+  DEFAULT: "📦",
 };
 
 interface MinecraftItemIconProps {
@@ -126,13 +126,13 @@ interface MinecraftItemIconProps {
   style?: React.CSSProperties;
 }
 
-export const MinecraftItemIcon: React.FC<MinecraftItemIconProps> = ({ 
-  material, 
+export const MinecraftItemIcon: React.FC<MinecraftItemIconProps> = ({
+  material,
   size = 24,
-  style = {}
+  style = {},
 }) => {
   const icon = minecraftIcons[material] || minecraftIcons.DEFAULT;
-  
+
   return (
     <Box
       style={{
@@ -142,7 +142,7 @@ export const MinecraftItemIcon: React.FC<MinecraftItemIconProps> = ({
         justifyContent: "center",
         width: size,
         height: size,
-        ...style
+        ...style,
       }}
     >
       {icon}
@@ -150,4 +150,4 @@ export const MinecraftItemIcon: React.FC<MinecraftItemIconProps> = ({
   );
 };
 
-export default MinecraftItemIcon; 
+export default MinecraftItemIcon;

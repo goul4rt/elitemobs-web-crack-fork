@@ -10,7 +10,7 @@ const minecraftSprites: Record<string, string> = {
   WOODEN_SWORD: "wooden_sword",
   STONE_SWORD: "stone_sword",
   NETHERITE_SWORD: "netherite_sword",
-  
+
   // Machados
   DIAMOND_AXE: "diamond_axe",
   IRON_AXE: "iron_axe",
@@ -18,7 +18,7 @@ const minecraftSprites: Record<string, string> = {
   WOODEN_AXE: "wooden_axe",
   STONE_AXE: "stone_axe",
   NETHERITE_AXE: "netherite_axe",
-  
+
   // Pás
   DIAMOND_SHOVEL: "diamond_shovel",
   IRON_SHOVEL: "iron_shovel",
@@ -26,7 +26,7 @@ const minecraftSprites: Record<string, string> = {
   WOODEN_SHOVEL: "wooden_shovel",
   STONE_SHOVEL: "stone_shovel",
   NETHERITE_SHOVEL: "netherite_shovel",
-  
+
   // Picaretas
   DIAMOND_PICKAXE: "diamond_pickaxe",
   IRON_PICKAXE: "iron_pickaxe",
@@ -34,11 +34,11 @@ const minecraftSprites: Record<string, string> = {
   WOODEN_PICKAXE: "wooden_pickaxe",
   STONE_PICKAXE: "stone_pickaxe",
   NETHERITE_PICKAXE: "netherite_pickaxe",
-  
+
   // Arcos
   BOW: "bow",
   CROSSBOW: "crossbow",
-  
+
   // Armaduras - Capacete
   DIAMOND_HELMET: "diamond_helmet",
   IRON_HELMET: "iron_helmet",
@@ -47,7 +47,7 @@ const minecraftSprites: Record<string, string> = {
   CHAINMAIL_HELMET: "chainmail_helmet",
   NETHERITE_HELMET: "netherite_helmet",
   TURTLE_HELMET: "turtle_helmet",
-  
+
   // Armaduras - Peitoral
   DIAMOND_CHESTPLATE: "diamond_chestplate",
   IRON_CHESTPLATE: "iron_chestplate",
@@ -56,7 +56,7 @@ const minecraftSprites: Record<string, string> = {
   CHAINMAIL_CHESTPLATE: "chainmail_chestplate",
   NETHERITE_CHESTPLATE: "netherite_chestplate",
   ELYTRA: "elytra",
-  
+
   // Armaduras - Calças
   DIAMOND_LEGGINGS: "diamond_leggings",
   IRON_LEGGINGS: "iron_leggings",
@@ -64,7 +64,7 @@ const minecraftSprites: Record<string, string> = {
   LEATHER_LEGGINGS: "leather_leggings",
   CHAINMAIL_LEGGINGS: "chainmail_leggings",
   NETHERITE_LEGGINGS: "netherite_leggings",
-  
+
   // Armaduras - Botas
   DIAMOND_BOOTS: "diamond_boots",
   IRON_BOOTS: "iron_boots",
@@ -72,19 +72,19 @@ const minecraftSprites: Record<string, string> = {
   LEATHER_BOOTS: "leather_boots",
   CHAINMAIL_BOOTS: "chainmail_boots",
   NETHERITE_BOOTS: "netherite_boots",
-  
+
   // Escudos
   SHIELD: "shield",
-  
+
   // Varinhas
   STICK: "stick",
   BLAZE_ROD: "blaze_rod",
-  
+
   // Poções
   POTION: "potion",
   SPLASH_POTION: "splash_potion",
   LINGERING_POTION: "lingering_potion",
-  
+
   // Comida
   APPLE: "apple",
   GOLDEN_APPLE: "golden_apple",
@@ -93,7 +93,7 @@ const minecraftSprites: Record<string, string> = {
   COOKIE: "cookie",
   CAKE: "cake",
   PUMPKIN_PIE: "pumpkin_pie",
-  
+
   // Blocos especiais
   DIAMOND: "diamond",
   EMERALD: "emerald",
@@ -101,7 +101,7 @@ const minecraftSprites: Record<string, string> = {
   AMETHYST_SHARD: "amethyst_shard",
   QUARTZ: "quartz",
   LAPIS_LAZULI: "lapis_lazuli",
-  
+
   // Itens especiais
   BOOK: "book",
   ENCHANTED_BOOK: "enchanted_book",
@@ -115,9 +115,9 @@ const minecraftSprites: Record<string, string> = {
   WATER_BUCKET: "water_bucket",
   LAVA_BUCKET: "lava_bucket",
   MILK_BUCKET: "milk_bucket",
-  
+
   // Default
-  DEFAULT: "diamond_sword"
+  DEFAULT: "diamond_sword",
 };
 
 interface MinecraftItemSpriteProps {
@@ -127,14 +127,14 @@ interface MinecraftItemSpriteProps {
   fallbackToIcon?: boolean;
 }
 
-export const MinecraftItemSprite: React.FC<MinecraftItemSpriteProps> = ({ 
-  material, 
+export const MinecraftItemSprite: React.FC<MinecraftItemSpriteProps> = ({
+  material,
   size = 32,
   style = {},
-  fallbackToIcon = true
+  fallbackToIcon = true,
 }) => {
   const spriteName = minecraftSprites[material] || minecraftSprites.DEFAULT;
-  
+
   // URLs para sprites do Minecraft (usando APIs públicas)
   const spriteUrls = {
     // API do Minecraft Wiki
@@ -236,11 +236,11 @@ export const MinecraftItemSprite: React.FC<MinecraftItemSpriteProps> = ({
       WATER_BUCKET: "💧",
       LAVA_BUCKET: "🌋",
       MILK_BUCKET: "🥛",
-      DEFAULT: "📦"
+      DEFAULT: "📦",
     };
 
     const fallbackIcon = fallbackIcons[material] || fallbackIcons.DEFAULT;
-    
+
     return (
       <Box
         style={{
@@ -250,7 +250,7 @@ export const MinecraftItemSprite: React.FC<MinecraftItemSpriteProps> = ({
           justifyContent: "center",
           width: size,
           height: size,
-          ...style
+          ...style,
         }}
       >
         {fallbackIcon}
@@ -266,7 +266,7 @@ export const MinecraftItemSprite: React.FC<MinecraftItemSpriteProps> = ({
       height={size}
       style={{
         imageRendering: "pixelated",
-        ...style
+        ...style,
       }}
       onError={handleImageError}
       fallbackSrc="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjNjY2NjY2Ii8+Cjx0ZXh0IHg9IjE2IiB5PSIyMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+4pyFPC90ZXh0Pgo8L3N2Zz4K"
@@ -274,4 +274,4 @@ export const MinecraftItemSprite: React.FC<MinecraftItemSpriteProps> = ({
   );
 };
 
-export default MinecraftItemSprite; 
+export default MinecraftItemSprite;

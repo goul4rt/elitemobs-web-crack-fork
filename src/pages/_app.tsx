@@ -4,15 +4,15 @@ import { useRouter } from "next/router";
 import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/code-highlight/styles.css";
-import "../features/modals/EliteMobsModal/minecraft-colors.css";
-import "../assets/minecraft-font.css";
 import { ThemeProvider } from "styled-components";
 import { NextSeo, SoftwareAppJsonLd } from "next-seo";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { Toaster } from "react-hot-toast";
+import "../assets/minecraft-font.css";
 import GlobalStyle from "../constants/globalStyle";
 import { SEO } from "../constants/seo";
 import { lightTheme } from "../constants/theme";
+import "../features/modals/EliteMobsModal/minecraft-colors.css";
 import { smartColorSchemeManager } from "../lib/utils/mantineColorScheme";
 
 const theme = createTheme({
