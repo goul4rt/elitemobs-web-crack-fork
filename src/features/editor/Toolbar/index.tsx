@@ -48,13 +48,13 @@ export const Toolbar = () => {
   return (
     <StyledTools>
       <Group gap="xs" justify="left" w="100%" style={{ flexWrap: "nowrap" }}>
-        <StyledToolElement title="JSON Crack">
+        <StyledToolElement title="JSON Crack (EliteMobs)">
           <Flex gap="xs" align="center" justify="center">
             <JSONCrackLogo fontSize="0.8rem" hideLogo />
           </Flex>
         </StyledToolElement>
         <Select
-          defaultValue="json"
+          defaultValue="yaml"
           size="xs"
           value={format}
           onChange={e => setFormat(e as FileFormat)}

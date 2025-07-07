@@ -43,7 +43,7 @@ export const PageLinks = () => {
             border: "none",
           }}
         >
-          Open JSON Crack
+          Open JSON Crack (EliteMobs)
         </Button>
       </Stack>
       <SimpleGrid cols={4} w="fit-content">

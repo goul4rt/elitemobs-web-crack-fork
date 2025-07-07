@@ -105,7 +105,7 @@ export const Footer = () => {
       </Flex>
       <Flex gap="xl">
         <Text fz="sm" c="dimmed">
-          © {dayjs().get("year")} JSON Crack
+          © {dayjs().get("year")} JSON Crack (EliteMobs)
         </Text>
         <Anchor component={Link} prefetch={false} fz="sm" c="dimmed" href="/legal/terms">
           <Text fz="sm" c="dimmed">

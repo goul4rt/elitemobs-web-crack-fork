@@ -38,7 +38,7 @@ export const FullscreenDropzone = () => {
         <Dropzone.Accept>
           <VscFiles size={100} />
           <Text fz="h1" fw={500} mt="lg">
-            Upload to JSON Crack
+            Upload to JSON Crack (EliteMobs)
           </Text>
           <Text fz="lg" c="dimmed" mt="sm">
             (Max file size: 300 KB)

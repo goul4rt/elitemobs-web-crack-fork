@@ -68,7 +68,7 @@ function JsonCrack({ Component, pageProps }: AppProps) {
     <>
       <NextSeo {...SEO} />
       <SoftwareAppJsonLd
-        name="JSON Crack"
+        name="JSON Crack (EliteMobs)"
         price="0"
         priceCurrency="USD"
         type="SoftwareApplication"
