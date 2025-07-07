@@ -1,0 +1,38 @@
+/* Fonte do Minecraft */
+@font-face {
+  font-family: 'Minecraft';
+  src: url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback para fonte similar ao Minecraft */
+@font-face {
+  font-family: 'Minecraft';
+  src: url('https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW9.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Classe para texto do Minecraft */
+.minecraft-text {
+  font-family: 'Minecraft', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+/* Tamanhos específicos */
+.minecraft-text-sm {
+  font-size: 12px;
+}
+
+.minecraft-text-lg {
+  font-size: 16px;
+}
+
+.minecraft-text-xl {
+  font-size: 18px;
+} 

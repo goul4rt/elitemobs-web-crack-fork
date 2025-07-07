@@ -1,0 +1,38 @@
+# Item EliteMobs com Sistema Completo de Potion Effects
+isEnabled: true
+material: DIAMOND_SWORD
+name: '&6&l⚔️ Espada Venenosa Lendária &6&l⚔️'
+lore:
+- '&2&lUma espada que envenena inimigos'
+- '&2&le cura o portador!'
+- '&7'
+- '&eEsta espada foi forjada com'
+- '&eveneno de aranha e cura divina'
+- '&7'
+- '&b&oEfeitos especiais:'
+- '&b&o• Envenena inimigos ao acertar'
+- '&b&o• Cura o portador ao acertar'
+- '&b&o• Visão noturna constante'
+enchantments:
+- SHARPNESS,5
+- KNOCKBACK,2
+- MENDING,1
+- LIGHTNING,3
+- SWEEPING_EDGE,1
+- UNBREAKING,5
+- FIRE_ASPECT,2
+- LOOTING,3
+potionEffects:
+- "POISON,0,target,onHit"
+- "HEAL,1,self,onHit"
+- "NIGHT_VISION,0,self,continuous"
+- "SPEED,1,self,continuous"
+- "STRENGTH,0,self,onHit"
+itemType: UNIQUE
+level: 1
+dropWeight: '1'
+scalability: scalable
+customModelID: 12345
+customModelV2: elitemobs:equipment/poison_sword
+permission: elitemobs.item.poison_sword
+soulbound: true 

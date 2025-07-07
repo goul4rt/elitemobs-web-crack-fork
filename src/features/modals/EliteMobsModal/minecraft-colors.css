@@ -1,0 +1,25 @@
+/* Cores do Minecraft */
+.mc-0 { color: #000000; } /* Preto */
+.mc-1 { color: #0000AA; } /* Azul Escuro */
+.mc-2 { color: #00AA00; } /* Verde Escuro */
+.mc-3 { color: #00AAAA; } /* Ciano Escuro */
+.mc-4 { color: #AA0000; } /* Vermelho Escuro */
+.mc-5 { color: #AA00AA; } /* Roxo Escuro */
+.mc-6 { color: #FFAA00; } /* Dourado */
+.mc-7 { color: #AAAAAA; } /* Cinza */
+.mc-8 { color: #555555; } /* Cinza Escuro */
+.mc-9 { color: #5555FF; } /* Azul */
+.mc-a { color: #55FF55; } /* Verde */
+.mc-b { color: #55FFFF; } /* Ciano */
+.mc-c { color: #FF5555; } /* Vermelho */
+.mc-d { color: #FF55FF; } /* Rosa */
+.mc-e { color: #FFFF55; } /* Amarelo */
+.mc-f { color: #FFFFFF; } /* Branco */
+
+/* Formatação */
+.mc-k { font-family: "Minecraft", monospace; } /* Obfuscated */
+.mc-l { font-weight: bold; } /* Bold */
+.mc-m { text-decoration: line-through; } /* Strikethrough */
+.mc-n { text-decoration: underline; } /* Underline */
+.mc-o { font-style: italic; } /* Italic */
+.mc-r { font-weight: normal; font-style: normal; text-decoration: none; } /* Reset */ 

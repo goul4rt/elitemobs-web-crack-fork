@@ -2,6 +2,33 @@ import React from "react";
 import { ColorSwatch } from "@mantine/core";
 import styled from "styled-components";
 
+// Função para converter códigos de cor do Minecraft (& para §)
+const formatMinecraftText = (text: string) => {
+  return text.replace(/&([0-9a-fk-or])/gi, "§$1");
+};
+
+// Componente para renderizar texto do Minecraft
+const MinecraftText = ({ text }: { text: string }) => {
+  const formattedText = formatMinecraftText(text);
+
+  return (
+    <span
+      style={{
+        fontFamily: "Minecraft, monospace",
+        whiteSpace: "pre-wrap",
+        wordBreak: "break-word",
+      }}
+      dangerouslySetInnerHTML={{
+        __html: formattedText
+          .replace(/§([0-9a-fk-or])/gi, '<span class="mc-$1">')
+          .replace(/§r/g, "</span><span>")
+          .replace(/§([0-9a-f])/gi, '</span><span class="mc-$1">')
+          .replace(/§([k-or])/gi, '</span><span class="mc-$1">'),
+      }}
+    />
+  );
+};
+
 const StyledRow = styled.span`
   display: inline-flex;
   align-items: center;
@@ -47,6 +74,12 @@ export const TextRenderer = ({ children }: TextRendererProps) => {
       </StyledRow>
     );
   }
+
+    // Verificar se contém códigos de cor do Minecraft (&0-9, &a-f, &k-or)
+  if (isMinecraftFormat(text)) {
+    return <MinecraftText text={text} />;
+  }
+
   return <>{children}</>;
 };
 
@@ -58,4 +91,10 @@ function isColorFormat(colorString: string) {
   return (
     hexCodeRegex.test(colorString) || rgbRegex.test(colorString) || rgbaRegex.test(colorString)
   );
+}
+
+function isMinecraftFormat(text: string) {
+  // Verificar se contém códigos de cor do Minecraft (&0-9, &a-f, &k-or)
+  const minecraftCodeRegex = /&([0-9a-fk-or])/gi;
+  return minecraftCodeRegex.test(text);
 }

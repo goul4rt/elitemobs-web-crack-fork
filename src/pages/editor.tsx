@@ -14,6 +14,7 @@ import { darkTheme, lightTheme } from "../constants/theme";
 import { BottomBar } from "../features/editor/BottomBar";
 import { FullscreenDropzone } from "../features/editor/FullscreenDropzone";
 import { Toolbar } from "../features/editor/Toolbar";
+import { FloatingMinecraftPreview } from "../features/editor/FloatingMinecraftPreview";
 import useGraph from "../features/editor/views/GraphView/stores/useGraph";
 import useConfig from "../store/useConfig";
 import useFile from "../store/useFile";
@@ -91,6 +92,7 @@ const EditorPage = () => {
         <QueryClientProvider client={queryClient}>
           <ExternalMode />
           <ModalController />
+          <FloatingMinecraftPreview />
           <StyledEditorWrapper>
             <StyledPageWrapper>
               <Toolbar />

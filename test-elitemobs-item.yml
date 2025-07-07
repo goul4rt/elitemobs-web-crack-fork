@@ -1,0 +1,27 @@
+isEnabled: true
+material: DIAMOND_SWORD
+name: '&6&lEspada Lendária do Desafio'
+lore:
+- '&2Awarded to those who challenge the'
+- '&2Wood League Arena!'
+- '&7'
+- '&eThis sword has been passed down'
+- '&ethrough generations of warriors'
+enchantments:
+- SHARPNESS,5
+- KNOCKBACK,2
+- MENDING,1
+- LIGHTNING,3
+- SWEEPING_EDGE,1
+- UNBREAKING,5
+potionEffects:
+- SPEED,2
+- STRENGTH,1
+itemType: UNIQUE
+level: 1
+dropWeight: '1'
+scalability: scalable
+customModelID: 12345
+customModelV2: elitemobs:equipment/challenger_sword
+permission: elitemobs.item.challenger_sword
+soulbound: true 

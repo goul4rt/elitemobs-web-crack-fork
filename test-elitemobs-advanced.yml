@@ -1,0 +1,34 @@
+# Item EliteMobs Avançado - Teste de Fonte e Sprites
+isEnabled: true
+material: DIAMOND_SWORD
+name: '&6&l⚔️ Espada Lendária do Desafio &6&l⚔️'
+lore:
+- '&2&lAwarded to those who challenge the'
+- '&2&lWood League Arena!'
+- '&7'
+- '&eThis sword has been passed down'
+- '&ethrough generations of warriors'
+- '&7'
+- '&b&oLegendary weapon of power'
+- '&b&oForged in the depths of the arena'
+enchantments:
+- SHARPNESS,5
+- KNOCKBACK,2
+- MENDING,1
+- LIGHTNING,3
+- SWEEPING_EDGE,1
+- UNBREAKING,5
+- FIRE_ASPECT,2
+- LOOTING,3
+potionEffects:
+- SPEED,2
+- STRENGTH,1
+- JUMP_BOOST,1
+itemType: UNIQUE
+level: 1
+dropWeight: '1'
+scalability: scalable
+customModelID: 12345
+customModelV2: elitemobs:equipment/challenger_sword
+permission: elitemobs.item.challenger_sword
+soulbound: true 
