@@ -64,17 +64,23 @@ const ExternalMode = () => {
       >
         External Host
       </Button>
-      <Modal title="External Host of JSON Crack (EliteMobs)" opened={isOpen} onClose={closeModal} centered>
+      <Modal
+        title="External Host of JSON Crack (EliteMobs)"
+        opened={isOpen}
+        onClose={closeModal}
+        centered
+      >
         <Group>
           <StyledTitle>Dear valued user,</StyledTitle>
           <Text>
             We would like to inform you that you are presently utilizing the external release of the{" "}
-            <Anchor href="https://jsoncrack.com">JSON Crack (EliteMobs)</Anchor>. Your continued support is
-            crucial in sustaining and improving our services.
+            <Anchor href="https://jsoncrack.com">JSON Crack (EliteMobs)</Anchor>. Your continued
+            support is crucial in sustaining and improving our services.
             <br />
             <br />
             We kindly encourage you to consider upgrading to the premium version, which not only
-            enhances your experience but also contributes to the ongoing development of JSON Crack (EliteMobs).
+            enhances your experience but also contributes to the ongoing development of JSON Crack
+            (EliteMobs).
           </Text>
         </Group>
         <Group pt="lg" justify="right">
